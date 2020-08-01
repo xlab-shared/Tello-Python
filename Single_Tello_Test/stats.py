@@ -21,12 +21,12 @@ class Stats:
         return diff.total_seconds()
 
     def print_stats(self):
-        print '\nid: %s' % self.id
-        print 'command: %s' % self.command
-        print 'response: %s' % self.response
-        print 'start time: %s' % self.start_time
-        print 'end_time: %s' % self.end_time
-        print 'duration: %s\n' % self.duration
+        print('\nid: {}'.format(self.id))
+        print('command: {}'.format(self.command))
+        print('response: {}'.format(self.response))
+        print('start time: {}'.format(self.start_time))
+        print('end_time: {}'.format(self.end_time))
+        print('duration: {}\n'.format(self.duration))
 
     def got_response(self):
         if self.response is None:
@@ -35,11 +35,11 @@ class Stats:
             return True
 
     def return_stats(self):
-        str = ''
-        str +=  '\nid: %s\n' % self.id
-        str += 'command: %s\n' % self.command
-        str += 'response: %s\n' % self.response
-        str += 'start time: %s\n' % self.start_time
-        str += 'end_time: %s\n' % self.end_time
-        str += 'duration: %s\n' % self.duration
-        return str
+        sentence = ''
+        sentence +=  '\nid: ' + str(self.id) + '\n'
+        sentence += 'command: ' + str(self.command) + '\n'
+        sentence += 'response: ' + str(self.response) + '\n'
+        sentence += 'start time: ' + str(self.start_time) + '\n'
+        sentence += 'end_time: ' + str(self.end_time) + '\n'
+        sentence += 'duration: ' + str(self.duration) + '\n'
+        return sentence
